@@ -69,9 +69,7 @@
       function loadPage(page) {
         const contentDiv = document.getElementById("content")
         if (page === "home") {
-          contentDiv.innerHTML = `
-          <!-- 여기에 홈페이지 내용이 들어갑니다. -->
-        `
+          contentDiv.innerHTML = `<!-- 여기에 홈페이지 내용이 들어갑니다. -->`
         } else if (page === "about") {
           contentDiv.innerHTML = `
           <div class="container">
@@ -82,10 +80,23 @@
           </div>
         `
         } else if (page === "portfolio") {
-          // 여기에 'portfolio' 페이지 내용을 추가해 주세요.
-        }
+          contentDiv.innerHTML = `
+          <div class="container">
+            <h1>포트폴리오 (Portfolio)</h1>
+            <p>- 여러 화장품 원료를 이용한 제품 개발</p>
+            <p>- 비건 펩타이드를 이용한 제품 개발</p>
+            <p>- 세라마이드 10%를 이용한 제품 개발</p>
+          </div>
+        `
         } else if (page === "sns") {
-          // 여기에 'sns' 페이지 내용을 추가해 주세요.
+          contentDiv.innerHTML = `
+          <div class="container">
+            <h1>소셜네트워크서비스 (SNS)</h1>
+            <p>- 유튜브 채널 소개</p>
+            <p>- 인스타그램 페이지 소개</p>
+            <p>- 페이스북 페이지 소개</p>
+          </div>
+        `
         }
       }
 
