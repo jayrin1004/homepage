@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/timeline-css/dist/timeline.min.css"
+    />
+    <style>
+      .card-img-top {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#" onclick="loadPage('home')"
+          >Home Page</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="loadPage('home')">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="loadPage('about')">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="loadPage('portfolio')"
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="loadPage('gallery')"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="loadPage('sns')">SNS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="content"></div>
+
+    <script>
+      function loadPage(page) {
+        const contentDiv = document.getElementById("content")
+        if (page === "home") {
+          contentDiv.innerHTML = `
+          <!-- 여기에 홈페이지 내용이 들어갑니다. -->
+        `
+        } else if (page === "about") {
+          contentDiv.innerHTML = `
+          <div class="container">
+            <h1>소개 (About)</h1>
+            <p>- 화장품 성분 및 컨셉원료 소개</p>
+            <p>- 경력 : 화학 및 화장품원료 개발 경력 20년</p>
+            <p>- 화장품 원료소개 유튜브 채널 3년 운영</p>
+          </div>
+        `
+        } else if (page === "portfolio") {
+          // 여기에 'portfolio' 페이지 내용을 추가해 주세요.
+        }
+        } else if (page === "sns") {
+          // 여기에 'sns' 페이지 내용을 추가해 주세요.
+        }
+      }
+
+      window.addEventListener("load", () => {
+        loadPage("home")
+      })
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
